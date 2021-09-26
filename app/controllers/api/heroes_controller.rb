@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # class HeroesController
-class HeroesController < ApplicationController
+class Api::HeroesController < ApplicationController
   before_action :set_hero, only: %i[show update destroy]
 
   # GET /heroes
