@@ -73,7 +73,13 @@ http DELETE :3000/api/heroes/23
 - scope sorted_by_name
 
 ```bash
+
 http :3000/api/heroes'?term=Machine'
+
+http :3000/api/heroes'?term=NaoExiste'
+
+http :3000/api/heroes
+
 ```
 
 *Original Source:* [Paulo Eduardo Melo](#)
