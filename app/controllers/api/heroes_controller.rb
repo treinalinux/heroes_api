@@ -7,7 +7,7 @@ module Api
 
     # GET /heroes
     def index
-      @heroes = Hero.all
+      @heroes = Hero.search(params[:term]).sorted_by_name
 
       render json: @heroes
     end
