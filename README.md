@@ -1,24 +1,79 @@
-# README
+# API Heroes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Api basic for work with heroes.
 
-Things you may want to cover:
+## CRUD Implemented
 
-* Ruby version
+- Create with POST
+- Read with GET
+- UPDATE with PUT
+- Delete with DELETE
 
-* System dependencies
+### POST
 
-* Configuration
+```bash
 
-* Database creation
+http POST :3000/heroes name='Spider Man back home'
 
-* Database initialization
+http POST :3000/heroes name=
 
-* How to run the test suite
+```
+### GET
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
 
-* Deployment instructions
+http :3000/heroes
 
-* ...
+http :3000/heroes/20
+
+```
+
+### PUT
+
+```bash
+
+http PUT :3000/heroes/20 name='Spider Man 2'
+
+http PUT :3000/heroes/20 name=
+
+```
+
+### DELETE
+
+```bash
+
+http DELETE :3000/heroes/21
+
+```
+
+## Refactor api
+
+```bash
+
+vim config/routes.rb
+mkdir -vp app/controllers/api
+mv app/controllers/heroes_controller.rb app/controllers/api/
+vim app/controllers/api/heroes_controller.rb
+
+http POST :3000/api/heroes name='Super novato'
+
+http :3000/api/heroes
+
+http :3000/api/heroes/19
+
+http PUT :3000/api/heroes/23 name='Super novato 3'
+
+http DELETE :3000/api/heroes/23
+
+```
+
+## Scopes Implemented
+
+- scope search
+- scope sorted_by_name
+
+```bash
+http :3000/api/heroes'?term=Machine'
+```
+
+*Original Source:* [Paulo Eduardo Melo](#)
